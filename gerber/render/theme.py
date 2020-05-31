@@ -96,11 +96,14 @@ THEMES = {
     'Blue': Theme(name='Blue',
                   topmask=RenderSettings(COLORS['blue soldermask'], alpha=0.8, invert=True),
                   bottommask=RenderSettings(COLORS['blue soldermask'], alpha=0.8, invert=True)),
+    'red': Theme(name='red',
+                  topmask=RenderSettings(COLORS['red soldermask'], alpha=0.8, invert=True),
+                  bottommask=RenderSettings(COLORS['red soldermask'], alpha=0.8, invert=True)),
 
     'Transparent Copper': Theme(name='Transparent',
-                                background=RenderSettings((0.9, 0.9, 0.9)),
-                                top=RenderSettings(COLORS['red'], alpha=0.5),
-                                bottom=RenderSettings(COLORS['blue'], alpha=0.5),
+                                background=RenderSettings(COLORS['red soldermask']),
+                                top=RenderSettings(COLORS['white'], alpha=0.8),
+                                bottom=RenderSettings(COLORS['red'], alpha=0.8),
                                 drill=RenderSettings((0.3, 0.3, 0.3))),
 
     'Transparent Multilayer': Theme(name='Transparent Multilayer',

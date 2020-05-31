@@ -51,7 +51,7 @@ ctx.render_layer(mask)
 # The default style can be overridden by passing a RenderSettings instance to
 # render_layer().
 # First, create a settings object:
-our_settings = RenderSettings(color=theme.COLORS['white'], alpha=0.85)
+our_settings = RenderSettings(color=theme.COLORS['red'], alpha=0.85)
 
 # Draw the silkscreen layer, and specify the rendering settings to use
 ctx.render_layer(silk, settings=our_settings)

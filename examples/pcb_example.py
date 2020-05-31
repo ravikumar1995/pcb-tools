@@ -26,7 +26,7 @@ from gerber.render import theme
 from gerber.render.cairo_backend import GerberCairoContext
 
 
-GERBER_FOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), 'gerbers'))
+GERBER_FOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), 'not-working'))
 
 
 # Create a new drawing context
@@ -38,12 +38,12 @@ pcb = PCB.from_directory(GERBER_FOLDER)
 # Render PCB top view
 ctx.render_layers(pcb.top_layers,
                   os.path.join(os.path.dirname(__file__), 'pcb_top.png',),
-                  theme.THEMES['OSH Park'], max_width=800, max_height=600)
+                  theme.THEMES['red'], max_width=800, max_height=600)
 
 # Render PCB bottom view
 ctx.render_layers(pcb.bottom_layers,
                   os.path.join(os.path.dirname(__file__), 'pcb_bottom.png'),
-                  theme.THEMES['OSH Park'], max_width=800, max_height=600)
+                  theme.THEMES['red'], max_width=800, max_height=600)
 
 # Render copper layers only
 ctx.render_layers(pcb.copper_layers + pcb.drill_layers,
